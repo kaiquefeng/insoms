@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+<img  alt="Devexperience" src="./public/logo.svg" width="250px" />
+</p>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-## Getting Started
+Project created for images Web scraping in website using puppeteer and AWS lambda in Vercel
 
-First, run the development server:
+<p align="center">
+  <a aria-label="Vercel logo" href="https://insoms.vercel.app/">
+    <img src="https://img.shields.io/badge/HOME%20-596AFF.svg?style=for-the-badge">
+  </a>
+  <a aria-label="Vercel logo" href="https://insoms.vercel.app/api/images">
+    <img src="https://img.shields.io/badge/API%20-579EFD.svg?style=for-the-badge">
+  </a>
+</p>
+
+## Prerequisites
+
+- Node
+- Yarn
+
+## Install
+
+1. git clone in that repository;
+2. `yarn` to install dependencies;
+
+## Usage
 
 ```bash
-npm run dev
-# or
 yarn dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# how to contribute
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Commit message
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+We suggest that commit messages follow the _conventional commit_ pattern.
 
-## Learn More
+Run `npm run commit` to get an interactive dashboard that lets you follow the commit pattern easily.
 
-To learn more about Next.js, take a look at the following resources:
+To learn more, visit these links:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Specification of Conventional Commit](https://www.conventionalcommits.org/)
+- [rules of @commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Local code editing
 
-## Deploy on Vercel
+_Fork_ the root repository, clone, make the change and open a PR for the root repository.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Performing PRs for the root repository
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- _Fork_ this repository on Github
+- Clone the _fork_ repository created: `git clone https://github.com/yourusuario/insoms.git`
+- Create a _branch_ to _commit_ your _feature_ or fix: `git checkout -b my-branch`
+- _Commit_ the changes: `git commit -m 'feat: My new feature'`
+- _push_ your _branch_ to your _fork_: `git push origin my-branch`
+- Go to [Pull Requests](https://github.com/kaiquefeng/insoms/pulls) of the root repository and create a PR with your _commit(s)_
