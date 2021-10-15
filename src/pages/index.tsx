@@ -1,13 +1,15 @@
 import Head from "next/head";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
+import { Feedback } from "../components/Feedback";
 
-import Footer from "../components/Footer";
+import { Footer } from "../components/Footer";
 import apiImages from "../services/baseImages";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   const [url, setUrl] = useState("");
+  const [errorRequest, setErrorRequest] = useState("");
   const [imagesList, setImagesList] = useState([]);
   const [loader, setLoader] = useState(false);
 
@@ -15,11 +17,17 @@ export default function Home() {
     console.log("valor", url);
     setLoader(true);
     const results = apiImages.get(`/images/${url}`);
-    results.then((res) => {
-      console.log("RESULTS::::", res.data);
-      setImagesList(res.data as any);
-      setLoader(false);
-    });
+    results
+      .then((res) => {
+        console.log("RESULTS::::", res.data);
+        setImagesList(res.data as any);
+        setLoader(false);
+      })
+      .catch((err) => {
+        setErrorRequest(err.message);
+
+        setLoader(false);
+      });
   }
   return (
     <div className={styles.container}>
@@ -49,19 +57,25 @@ export default function Home() {
             </a>
           </div>
         </div>
+        {errorRequest !== "" && <Feedback value={url} error={errorRequest} />}
 
         <div
           className={loader ? styles.containerLoading : styles.containerImages}
         >
-          {loader && <div className={styles.loader}></div>}
-          {imagesList.map((item: any) => (
-            <div key={item.src} className={styles.item}>
-              <img className={styles.imageItem} src={item.src} />
-              <a className={styles.download} href={item.src} download>
-                Download
-              </a>
-            </div>
-          ))}
+          {loader ? (
+            <div className={styles.loader}></div>
+          ) : (
+            <>
+              {imagesList.map((item: any) => (
+                <div key={item.src} className={styles.item}>
+                  <img className={styles.imageItem} src={item.src} />
+                  <a className={styles.download} href={item.src} download>
+                    Download
+                  </a>
+                </div>
+              ))}
+            </>
+          )}
         </div>
       </main>
 
