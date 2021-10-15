@@ -21,7 +21,7 @@ export default async function handler(
 
   const imgList = await page.evaluate(() => {
     const nodeList = document.querySelectorAll("img");
-    const nodeArray = [...nodeList];
+    const nodeArray = [...(nodeList as any)];
 
     console.log("NODE", nodeList);
 
@@ -34,5 +34,5 @@ export default async function handler(
 
   await browser.close();
 
-  res.status(200).json(imgList);
+  res.status(200).json(imgList as any);
 }
