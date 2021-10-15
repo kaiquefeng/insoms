@@ -35,7 +35,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Busca de imagens na web <code className={styles.code}>BETA</code>
+          Web scrapping for images <code className={styles.code}>BETA</code>
         </p>
         <div>
           <div className={styles.containerInput}>
