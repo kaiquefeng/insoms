@@ -17,7 +17,7 @@ export default function Home() {
     const results = apiImages.get(`/${url}`);
     results.then((res) => {
       console.log("RESULTS::::", res.data);
-      setImagesList(res.data);
+      setImagesList(res.data as any);
       setLoader(false);
     });
   }
