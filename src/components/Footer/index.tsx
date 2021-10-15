@@ -10,9 +10,9 @@ export default function Footer() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Powered by{" "}
+        Powered by{"  "}
         <span className={styles.logo}>
-          <Image src="/logo.svg" alt="DCatch" width={72} height={16} />
+          <Image src="/logo.svg" alt="Insoms" width={72} height={16} />
         </span>
       </a>
     </footer>

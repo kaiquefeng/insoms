@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiImages = axios.create({
-  baseURL: "http://localhost:3000/api/images",
+  baseURL: process.env.BASE_URL,
   headers: { "Content-Type": "application/json", Accept: "application/json" },
 });
 
