@@ -1,3 +1,15 @@
+.containerImages {
+  max-width: 1440px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.imageItem {
+  max-width: 200px;
+}
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -5,7 +17,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .main {
