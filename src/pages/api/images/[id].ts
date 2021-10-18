@@ -11,11 +11,7 @@ export default async function handler(
   { query: { id } }: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const result = {
-    name: "John Doe",
-    data: { name: "test 2" },
-  };
-
+  
   // const browser = await puppeteer.launch({ headless: true });
   const browser = await puppeteer.launch(
     process.env.NODE_ENV === "production"
